@@ -30,15 +30,18 @@ ratingButton.forEach(button => {
 				content.classList.add("hide");
 				errorMessage.classList.add("hidden");
 			}
-
-			returnButton.addEventListener("click", () => {
-				button.classList.remove("selected");
-				errorMessage.classList.add("hidden");
-				message.classList.remove("show");
-				setTimeout(() => {
-					content.classList.remove("hide");
-				}, 250);
-			});
+		});
+		returnButton.addEventListener("click", () => {
+			button.classList.remove("selected");
+			errorMessage.classList.add("hidden");
+			message.classList.remove("show");
+			setTimeout(() => {
+				content.classList.remove("hide");
+			}, 250);
 		});
 	});
 });
+
+function mouseDown() {
+	ratingButton.style.transform = "scale(0.9)";
+}
